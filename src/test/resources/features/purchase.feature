@@ -7,5 +7,6 @@ Feature: Adidas Order Placement Functionalities
     When User adds some "Sony vaio i5" from "Laptops"
     And User adds some "Dell i7 8gb" from "Laptops"
     And User navigates to cart and removes "Dell i7 8gb"
+    And User clicks on place order
 
 

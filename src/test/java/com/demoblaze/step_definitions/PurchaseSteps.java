@@ -30,4 +30,10 @@ public class PurchaseSteps {
         productPage.deleteProduct(product);
 
     }
+
+    @And("User clicks on place order")
+    public void userClicksOnPlaceOrder() {
+        productPage.cart.click();
+        productPage.placeOrder.click();
+    }
 }

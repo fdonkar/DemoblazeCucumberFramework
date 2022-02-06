@@ -14,6 +14,9 @@ public class ProductPage extends BasePage{
     @FindBy(xpath = "//a[.='Add to cart']")
     public WebElement addToCartElement;
 
+    @FindBy(xpath = "//button[.='Place Order']")
+    public WebElement placeOrder;
+
 
     public void navigateTo(String product, String category){
         Driver.get().findElement(By.linkText(category)).click();
