@@ -8,5 +8,7 @@ Feature: Adidas Order Placement Functionalities
     And User adds some "Dell i7 8gb" from "Laptops"
     And User navigates to cart and removes "Dell i7 8gb"
     And User clicks on place order
+    And User fills the form for order and clicks on purchase button
+    Then Order ID and order amount should be as expected
 
 
