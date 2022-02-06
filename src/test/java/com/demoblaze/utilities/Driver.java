@@ -11,6 +11,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class Driver {
 
     private Driver(){}
@@ -25,6 +27,8 @@ public class Driver {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    driver.manage().window().maximize();
+                    driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
