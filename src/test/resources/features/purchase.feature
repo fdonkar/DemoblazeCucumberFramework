@@ -4,6 +4,7 @@ Feature: Adidas Order Placement Functionalities
 
   Background:
     Given User is on the homepage
+
   @smoke
   Scenario: Placing a successful order
     When User adds some "Sony vaio i5" from "Laptops"
@@ -13,7 +14,6 @@ Feature: Adidas Order Placement Functionalities
     And User fills the form for order and clicks on purchase button
     Then Order ID and order amount should be as expected
 
-  @wip
   Scenario: Verify all the products exist in the products pages
     Then Under "Phones" category user should be able to see the list of following products
       | Samsung galaxy s6 |
@@ -34,3 +34,14 @@ Feature: Adidas Order Placement Functionalities
       | Apple monitor 24 |
       | ASUS Full HD     |
 
+  @wip
+  Scenario Outline: User checks different laptops can be added to cart <differentLaptops>
+    Then User adds some "<differentLaptops>" from "Laptops"
+    Examples:
+      | differentLaptops    |
+      | Sony vaio i5        |
+      | Sony vaio i7        |
+      | MacBook air         |
+      | Dell i7 8gb         |
+      | 2017 Dell 15.6 Inch |
+      | MacBook Pro         |
