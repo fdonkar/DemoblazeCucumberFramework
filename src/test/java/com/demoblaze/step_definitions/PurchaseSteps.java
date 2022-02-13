@@ -10,6 +10,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class PurchaseSteps {
 
     ProductPage productPage = new ProductPage();
@@ -65,4 +67,5 @@ public class PurchaseSteps {
 
 
     }
+
 }
