@@ -7,14 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"html:target/cucumber-report.html",
-                  "json:target/cucumber.json",
-                  "rerun:target/rerun.txt"},
+                "json:target/cucumber.json"},
         features = "src/test/resources/features",
-        glue = "com/demoblaze/step_definitions",
-        dryRun = false,
-        tags = "@wip"
+        glue = "com/demoblaze/step_definitions"
 )
-public class CukesRunner {
-
-
+public class FailedTestRunner {
 }
