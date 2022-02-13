@@ -4,7 +4,7 @@ Feature: Adidas Order Placement Functionalities
 
   Background:
     Given User is on the homepage
-
+  @smoke
   Scenario: Placing a successful order
     When User adds some "Sony vaio i5" from "Laptops"
     And User adds some "Dell i7 8gb" from "Laptops"
@@ -23,3 +23,14 @@ Feature: Adidas Order Placement Functionalities
       | Iphone 6 32gb     |
       | Sony xperia z5    |
       | HTC One M9        |
+    Then Under "Laptops" category user should be able to see the list of following products
+      | Sony vaio i5        |
+      | Sony vaio i7        |
+      | MacBook air         |
+      | Dell i7 8gb         |
+      | 2017 Dell 15.6 Inch |
+      | MacBook Pro         |
+    Then Under "Monitors" category user should be able to see the list of following products
+      | Apple monitor 24 |
+      | ASUS Full HD     |
+

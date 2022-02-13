@@ -17,8 +17,8 @@ public class DataTableSteps {
     @Then("Under {string} category user should be able to see the list of following products")
     public void under_category_user_should_be_able_to_see_the_list_of_following_products(String category, List<String> expectedProducts) {
 
-        BrowserUtils.sleep(2);
         Driver.get().findElement(By.linkText(category)).click();
+        BrowserUtils.sleep(2);
         List<String> actualProducts = BrowserUtils.getElementsText(productPage.products);
         System.out.println("expectedProducts = " + expectedProducts);
         System.out.println("actualProducts = " + actualProducts);
